@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="ASCII"?>
+<SimpleUML:Package xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:SimpleUML="http://SimpleUML" xsi:schemaLocation="http://SimpleUML ../metamodels/SimpleUML.ecore">
+  <classes xsi:type="SimpleUML:Class" name="Order" isPersistent="true">
+    <attributes name="order_no" isPrimary="true" type="//@classes.1"/>
+    <outgoing name="customer" dest="//@classes.2"/>
+  </classes>
+  <classes xsi:type="SimpleUML:PrimitiveDataType"/>
+  <classes xsi:type="SimpleUML:Class" name="Customer" isPersistent="true" incoming="//@classes.0/@outgoing.0">
+    <attributes name="name" isPrimary="true" type="//@classes.3"/>
+    <outgoing name="address" dest="//@classes.4"/>
+  </classes>
+  <classes xsi:type="SimpleUML:PrimitiveDataType" kind="dt_string"/>
+  <classes xsi:type="SimpleUML:Class" name="Address" incoming="//@classes.2/@outgoing.0">
+    <attributes name="addr" isPrimary="true" type="//@classes.3"/>
+  </classes>
+</SimpleUML:Package>
